@@ -17,7 +17,7 @@
     </head>
     <body>
         <!-- Main Div-->
-        <div class="container w-25 d-flex flex-column bg-white mt-2 rounded-4 main">
+        <div class="container main-container  d-flex flex-column bg-white mt-2 rounded-4 main">
             <div class="main px-2"> 
  <!--Heading-->
  <div class="main-block d-flex flex-column w-100  ">
@@ -29,37 +29,78 @@
 </div>
 <!--Block-1-->
 <div class="d-flex flex-column rounded-3  w-100 justify-content-center mt-4  ">
-    <div class=" px-2 d-flex  align-items-center secondary-bg">
+    <div class=" px-2 border d-flex rounded-3 justify-content-between align-items-center mt-2 block-1-div">
         <p class="mt-2 fw-400 block-2-para primary-text-color">Refund to original payment method via shopify</p>
+        <input style="height:20px; width:20px; vertical-align: middle;" type="radio" name="payment method" />
     </div>
-    <div class=" px-2 border d-flex rounded-3 justify-content-between align-items-center mt-2">
+    <div class=" px-2 border d-flex rounded-3 justify-content-between align-items-center mt-2 block-1-div">
         <p class="mt-2 fw-400 block-2-para primary-text-color">Return as a store credit</p>
         <input style="height:20px; width:20px; vertical-align: middle;" type="radio" name="payment method" />
     </div>
-    <div class=" px-2 border rounded-3 d-flex justify-content-between align-items-center mt-2">
+    <div class=" px-2 border rounded-3 d-flex justify-content-between align-items-center mt-2 block-1-div">
         <p class="mt-2 fw-400 block-2-para primary-text-color">Refund directly to customer</p>
         <input type="radio" name="payment method" />
     </div>
 </div>
 <!--Block-2-->
 <div class="d-flex flex-column w-100 justify-content-center border mt-4">
-    <p class="primary-text-color fw-400 block-2-para" style="margin-top:-13px; margin-left:15px">Deduction</p>
+    <p class="primary-text-color fw-400 block-2-para" style="margin-top:-13px; margin-left:15px">Deductions</p>
    <div class="d-flex w-100 ">
-    <div class="d-flex flex-column  justify-content-center primary-text-color " style="width:180px">
-        <div class="d-flex w-100 " > 
+    <div class="d-flex flex-column w-100 justify-content-center primary-text-color " >
+        <div class="d-flex  w-100 justify-content-betweenw  " > 
             <div class="d-flex w-100  align-items-center p-2">
-                <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input  " type="checkbox" value="" id="flexCheckDefault">
                 <label class="form-check-label fw-400 checkbox-label mt-1" for="flexCheckDefault">
                     &nbsp; &nbsp; Restocking Fee
                 </label>
             </div>
+            <div class="d-flex w-100 px-2">
+                <div>  
+                    <input type="number" class="form-control secondary-text-color  p-1 " style="width:60px" id="input-1" placeholder="13">
+                </div>
+                <div class="d-flex w-100 justify-content-center  secondary-bg rounded-3" style="height:35px;">
+                    <div class="d-flex w-100 justify-content-center align-items-center secondary-text-color" >  
+            
+                        <input type="radio" name="deduction" id="percentage" />
+                        &nbsp; <label class="form-check-label " for="percentage" style="font-size:12px">
+                          %
+                        </label>
+                    </div>
+                    <div class="d-flex justify-content-between  align-items-center  rounded-3  secondary-text-color"> 
+                       
+                        <input type="radio" name="deduction" id="flat" />
+                        &nbsp;&nbsp;<label class="form-check-label " for="flat" style="font-size:12px;padding-right:5px">
+                        Flat
+                        </label>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="d-flex"> 
-            <div class="d-flex w-100  align-items-center p-2">
+            <div class="d-flex w-100  align-items-center p-2 ">
                 <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault">
                 <label class="form-check-label fw-400 checkbox-label mt-1 " for="flexCheckDefault">
-                   &nbsp; &nbsp; Reverse Shippment Cost
+                   &nbsp; &nbsp; Reverse Shipment Cost
                 </label>
+            </div>
+            <div class="d-flex w-100 mt-1 px-2">
+                <div class="rounded-3">  
+                    <input type="number" class="form-control secondary-text-color p-1 " style="width:60px" id="input-1" placeholder="$3">
+                </div>
+                <div class="d-flex w-100 justify-content-between p-1 secondary-bg ">
+                    <div class="d-flex w-100 justify-content-center align-items-center" style="visibility:hidden">  
+                        <input type="radio" name="deduction" id="percentage" />
+                        &nbsp; <label class="form-check-label mt-1" for="percentage" style="font-size:12px">
+                          %
+                        </label>
+                    </div>
+                    <div class="d-flex justify-content-between  align-items-center ml-2" style="visibility:hidden"> 
+                        <input type="radio" name="deduction" id="flat" />
+                        &nbsp;&nbsp;<label class="form-check-label mt-1" for="flat" style="font-size:12px">
+                        Flat
+                        </label>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="d-flex "> 
@@ -69,6 +110,9 @@
                     &nbsp; &nbsp; Shipping Cost
                 </label>
             </div>
+            <div class="d-flex w-100 mt-2 px-2">
+                <div class="second secondary-text-color" style="font-size:14px"> $122.73</div>
+            </div>
         </div>
         <div class="d-flex "> 
             <div class="d-flex w-100  align-items-center p-2">
@@ -77,10 +121,13 @@
                     &nbsp; &nbsp; Tax From Refund
                 </label>
             </div>
+            <div class="d-flex w-100 mt-2 px-2">
+                <div class="second secondary-text-color" style="font-size:14px"> $0</div>
+            </div>
         </div>
        
     </div>
-    <div class="d-flex flex-column   " style="width:150px">
+    <div class="d-none flex-column" style="width:150px;">
         <div class="d-flex w-100">
             <div>  
                 <input type="number" class="form-control secondary-text-color " style="width:60px" id="input-1" placeholder="13">
