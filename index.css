@@ -28,9 +28,6 @@
     height: 1.2em !important;
 }
 
-body {
-    background-color: #f2f1ff;
-}
 
 :root {
     --blue: #473e9e;
@@ -63,6 +60,11 @@ body {
     --loading-bg: #edecff;
     --bg-item: #f3f2ff;
 }
+
+body {
+    background-color: var(--main-input-bg);
+}
+
 
 .container {
     height: 80vh;
@@ -173,8 +175,37 @@ input[type=radio] {
     height: 12px;
 }
 
-.block-1-div:hover {
-    border: 2px solid #3291E9 !important;
+.block-div:hover {
+
+    border-radius: 3px !important;
+    background-color: var(--main-input-bg);
+
+}
+
+/* input[type="radio"]:focus {
+    border: 2px solid var(--light-blue) !important;
     border-radius: 3px !important;
 
+} */
+
+/* input[type="radio"]:checked:parent {
+    font-weight: bold !important;
+    color: red !important;
+    background: red !important;
+    border-radius: 30px !important;
+
+} */
+
+.block-div:has(input[type="radio"]:checked) {
+    font-weight: bold !important;
+    color: red !important;
+    background: red !important;
+    border-radius: 30px !important;
+}
+
+/* input[type="radio"]:checked:has(.block-div) {
+    background: red !important;
+}*/
+.selected-div {
+    border: 2px solid var(--light-blue) !important;
 }

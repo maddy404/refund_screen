@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Customer Email Template</title>
+        <title>Issue Refund</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,17 +29,17 @@
 </div>
 <!--Block-1-->
 <div class="d-flex flex-column rounded-3  w-100 justify-content-center mt-4  ">
-    <div class=" px-2 border d-flex rounded-3 justify-content-between align-items-center mt-2 block-1-div">
+    <div onClick="addStyle(this)" id="original_payment" class=" px-2 border d-flex rounded-3 justify-content-between align-items-center mt-2 block-div-1 block-div">
         <p class="mt-2 fw-400 block-2-para primary-text-color">Refund to original payment method via shopify</p>
-        <input style="height:20px; width:20px; vertical-align: middle;" type="radio" name="payment method" />
+        <input style="height:20px; width:20px; vertical-align: middle;" type="radio" name="payment_method" />
     </div>
-    <div class=" px-2 border d-flex rounded-3 justify-content-between align-items-center mt-2 block-1-div">
+    <div onClick="addStyle(this)"  id="store_credit" class=" px-2 border d-flex rounded-3 justify-content-between align-items-center mt-2 block-div-2 block-div">
         <p class="mt-2 fw-400 block-2-para primary-text-color">Return as a store credit</p>
-        <input style="height:20px; width:20px; vertical-align: middle;" type="radio" name="payment method" />
+        <input style="height:20px; width:20px; vertical-align: middle;" type="radio" name="payment_method" />
     </div>
-    <div class=" px-2 border rounded-3 d-flex justify-content-between align-items-center mt-2 block-1-div">
+    <div onClick="addStyle(this)" id="refund_directly" class=" px-2 border rounded-3 d-flex justify-content-between align-items-center mt-2 block-div-3 block-div">
         <p class="mt-2 fw-400 block-2-para primary-text-color">Refund directly to customer</p>
-        <input type="radio" name="payment method" />
+        <input type="radio" name="payment_method" />
     </div>
 </div>
 <!--Block-2-->
@@ -48,7 +48,7 @@
    <div class="d-flex w-100 ">
     <div class="d-flex flex-column w-100 justify-content-center primary-text-color " >
         <div class="d-flex  w-100 justify-content-betweenw  " > 
-            <div class="d-flex w-100  align-items-center p-2">
+            <div class="d-flex w-100  align-items-center p-2" >
                 <input class="form-check-input  " type="checkbox" value="" id="flexCheckDefault">
                 <label class="form-check-label fw-400 checkbox-label mt-1" for="flexCheckDefault">
                     &nbsp; &nbsp; Restocking Fee
@@ -205,6 +205,7 @@
            
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
        
     </body>
 </html>
